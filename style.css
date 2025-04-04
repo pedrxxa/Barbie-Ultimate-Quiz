@@ -1,0 +1,159 @@
+@font-face {
+  font-family: 'BarbieFont';
+  src: url('assets/fonts/barbie-font.woff2') format('woff2');
+}
+
+body {
+  font-family: 'BarbieFont', 'Comic Sans MS', cursive, sans-serif;
+  background: url('assets/images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #5a005a;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+height: 100vh;
+overflow: hidden;
+}
+
+h1 {
+  font-size: 2em;
+  color: #ff69b4;
+  margin-bottom: 20px;
+}
+
+#quiz-container {
+  background-color: rgba(255, 182, 193, 0.50); /* rosinha com transparência */
+  padding: 20px 25px;
+  border-radius: 25px;
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.2);
+  max-width: 90vw;
+  width: 100%;
+  margin: 20px auto;
+  box-sizing: border-box;
+  backdrop-filter: blur(2px); /* Efeito delicado de vidro fosco */
+}
+
+button {
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  margin: 10px;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e754a3;
+}
+
+#opcoes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.feedback {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.explicacao {
+  font-size: 0.95em;
+  color: #a64ca6;
+  margin-top: 10px;
+}
+
+/* 💕 Corações flutuando no fundo */
+body::before {
+  content: "💖💜💛💙💗";
+  font-size: 40px;
+  position: fixed;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: coracoes 15s linear infinite;
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+@keyframes coracoes {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(120vh) rotate(360deg);
+  }
+}
+
+/* 💕 MULTI-CORAÇÕES FLUTUANTES NO FUNDO */
+.floating-heart {
+  position: fixed;
+  font-size: 32px;
+  animation: flutuar 10s linear infinite;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* 🌈 Base para elementos mágicos flutuantes */
+.floating-emoji {
+  position: fixed;
+  font-size: 28px;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+  animation: subir 12s linear infinite;
+}
+
+/* 🌀 Animação de subir */
+@keyframes subir {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-20vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ✨ Estrelas que giram */
+.girando {
+  animation: subir 15s linear infinite, girar 3s linear infinite;
+}
+
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 🌟 Elementos que piscam */
+.piscando {
+  animation: subir 10s linear infinite, piscar 1.5s ease-in-out infinite;
+}
+
+@keyframes piscar {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}

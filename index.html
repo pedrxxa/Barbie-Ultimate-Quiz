@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Barbie Ultimate Quiz - Desafio das Irmãs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 🌈 Emojis Mágicos Flutuantes -->
+  <span class="floating-heart" style="left: 5%; animation-delay: 0s;">💖</span>
+  <span class="floating-heart" style="left: 20%; animation-delay: 3s; font-size: 28px;">💜</span>
+  <span class="floating-heart" style="left: 35%; animation-delay: 6s;">💛</span>
+  <span class="floating-heart" style="left: 50%; animation-delay: 1s; font-size: 24px;">💗</span>
+  <span class="floating-heart" style="left: 70%; animation-delay: 5s; font-size: 36px;">💙</span>
+  <span class="floating-heart" style="left: 85%; animation-delay: 2s; font-size: 30px;">💘</span>
+
+  <span class="floating-emoji" style="left: 5%; animation-delay: 0s;">💖</span>
+  <span class="floating-emoji girando" style="left: 15%; font-size: 24px; animation-delay: 2s;">✨</span>
+  <span class="floating-emoji piscando" style="left: 25%; font-size: 32px; animation-delay: 1s;">💘</span>
+  <span class="floating-emoji girando" style="left: 35%; font-size: 22px; animation-delay: 3s;">🌟</span>
+  <span class="floating-emoji" style="left: 50%; font-size: 26px; animation-delay: 4s;">💜</span>
+  <span class="floating-emoji piscando" style="left: 60%; font-size: 30px; animation-delay: 5s;">💛</span>
+  <span class="floating-emoji girando" style="left: 70%; font-size: 20px; animation-delay: 6s;">✨</span>
+  <span class="floating-emoji" style="left: 80%; font-size: 28px; animation-delay: 7s;">💗</span>
+  <span class="floating-emoji piscando" style="left: 90%; font-size: 25px; animation-delay: 8s;">💙</span>
+
+  <div id="quiz-container">
+    <h1>✨ Barbie Ultimate Quiz – Desafio das Irmãs ✨👑</h1>
+    <img src="assets/images/logo-barbie.png" alt="Logo Barbie" style="max-width: 100px; margin-bottom: 10px;">
+
+    <div id="menu">
+      <button onclick="startQuiz()">Iniciar Quiz</button>
+    </div>
+
+    <div id="quiz" style="display: none;">
+      <p id="pergunta-texto"></p>
+      <div id="opcoes-container"></div>
+      <p id="feedback" class="feedback"></p>
+      <p id="explicacao" class="explicacao"></p>
+      <button onclick="proximaPergunta()" id="proxima-btn">Próxima</button>
+    </div>
+
+    <div id="resultado" style="display: none;">
+      <h2>
+        <img src="assets/images/heart-icon.png" style="width: 24px; vertical-align: middle; margin-right: 5px;">
+        Resultado Final
+        <img src="assets/images/heart-icon.png" style="width: 24px; vertical-align: middle; margin-left: 5px;">
+      </h2>
+      <p id="pontuacao-final" style="font-family: Arial, sans-serif;"></p>
+      <button onclick="reiniciarQuiz()">
+        <img src="assets/images/heart-icon.png" style="width: 16px; vertical-align: middle; margin-right: 5px;">
+        Jogar Novamente
+      </button>
+    </div>
+  </div>
+
+  <!-- 🎵 Música de fundo -->
+  <audio id="musica-fundo" loop>
+    <source src="assets/audio/harpa-encantada.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio :(
+  </audio>
+
+  <button onclick="toggleMusica()" style="position: fixed; bottom: 10px; left: 10px; z-index: 10; font-size: 14px; border-radius: 15px; padding: 5px 12px;">
+    🎵 Música
+  </button>
+
+  <!-- Confete mágico -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="perguntas.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
