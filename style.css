@@ -157,3 +157,51 @@ body::before {
   0%, 100% { opacity: 0.3; }
   50% { opacity: 1; }
 }
+
+/* 🌸 AJUSTES PARA CELULARES */
+@media screen and (max-width: 768px) {
+  #quiz-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+  }
+
+  #quiz-container img {
+    max-width: 70px;
+    margin-bottom: 5px;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 10px 18px;
+  }
+
+  #pontuacao-final {
+    font-size: 0.95em;
+  }
+
+  #feedback, #explicacao {
+    font-size: 0.9em;
+  }
+
+  /* Botão de música */
+  button[onclick="toggleMusica()"] {
+    font-size: 12px;
+    padding: 4px 10px;
+    bottom: 5px;
+    left: 5px;
+  }
+
+  /* Emojis flutuantes mais suaves */
+  .floating-heart,
+  .floating-emoji {
+    font-size: 18px !important;
+    animation-duration: 18s !important;
+  }
+}
