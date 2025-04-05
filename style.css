@@ -26,12 +26,11 @@ h1 {
 }
 
 #quiz-container {
-  /* Fundo rosinha REMOVIDO */
   padding: 20px 25px;
   border-radius: 25px;
   box-shadow: none;
-  max-width: 600px;
-  width: 95%;
+  max-width: 700px;
+  width: 98%;
   margin: 20px auto;
   box-sizing: border-box;
   display: flex;
@@ -40,6 +39,7 @@ h1 {
   min-height: 95vh;
   background: none;
   backdrop-filter: none;
+  font-size: 1.25em;
 }
 
 #quiz-container img[alt="Logo Barbie"] {
@@ -71,20 +71,23 @@ button:hover {
   margin-top: 15px;
 }
 
+#pergunta-texto {
+  font-size: 1.3em;
+}
+
 #opcoes-container button {
-  font-size: 1.15em;
-  padding: 14px 22px;
+  font-size: 1.3em;
+  padding: 16px 24px;
+}
+
+.feedback,
+.explicacao {
+  font-size: 1.1em;
+  margin-top: 10px;
 }
 
 .feedback {
   font-weight: bold;
-  margin-top: 15px;
-}
-
-.explicacao {
-  font-size: 1em;
-  color: #a64ca6;
-  margin-top: 10px;
 }
 
 body::before {
@@ -171,44 +174,43 @@ body::before {
 /* 🌸 AJUSTES PARA CELULARES */
 @media screen and (max-width: 768px) {
   body {
-    font-size: 16px; /* Aumenta fonte geral */
+    font-size: 18px;
   }
 
   #quiz-container {
-    width: 95%;
-    max-width: 95%;
-    margin: 20px auto;
-    padding: 15px;
-    border-radius: 15px;
+    width: 98%;
+    max-width: 98%;
+    font-size: 1.25em;
+    padding: 20px 10px;
     min-height: 95vh;
-    font-size: 1.1em;
   }
 
   h1 {
-    font-size: 1.4em;
+    font-size: 1.6em;
     margin-bottom: 10px;
   }
 
   #quiz-container img {
-    max-width: 70px;
-    margin-bottom: 5px;
+    max-width: 80px;
+    margin-bottom: 8px;
   }
 
   #pergunta-texto {
-    font-size: 1.2em;
+    font-size: 1.35em;
   }
 
   #opcoes-container button {
-    font-size: 1.2em;
-    padding: 14px 22px;
+    font-size: 1.3em;
+    padding: 16px 22px;
+  }
+
+  .feedback,
+  .explicacao {
+    font-size: 1.1em;
   }
 
   #pontuacao-final {
-    font-size: 1em;
-  }
-
-  #feedback, #explicacao {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 
   button[onclick="toggleMusica()"] {
