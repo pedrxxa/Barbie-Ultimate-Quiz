@@ -25,7 +25,11 @@
   <span class="floating-emoji piscando" style="left: 90%; font-size: 25px; animation-delay: 8s;">💙</span>
 
   <div id="quiz-container">
-    <h1>✨ Barbie Ultimate Quiz – Desafio das Irmãs ✨👑</h1>
+    <h1 id="titulo-quiz">
+      ✨ Barbie Ultimate Quiz ✨<br>
+      <span>✨ Desafio das Irmãs ✨👑</span>
+    </h1>
+
     <img src="assets/images/logo-barbie.png" alt="Logo Barbie" style="max-width: 100px; margin-bottom: 10px;">
 
     <div id="menu">
@@ -60,9 +64,8 @@
     Seu navegador não suporta áudio :(
   </audio>
 
-  <button onclick="toggleMusica()" style="position: fixed; bottom: 10px; left: 10px; z-index: 10; font-size: 14px; border-radius: 15px; padding: 5px 12px;">
-    🎵 Música
-  </button>
+  <!-- Botão de Música sem estilo inline -->
+  <button onclick="toggleMusica()">🎵 Música</button>
 
   <!-- Confete mágico -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>

@@ -17,7 +17,7 @@ body {
   height: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  font-size: 20px; /* 🚀 Aumenta tudo */
+  font-size: 20px;
 }
 
 h1 {
@@ -30,7 +30,7 @@ h1 {
   padding: 20px 20px;
   border-radius: 25px;
   box-shadow: none;
-  max-width: 1000px; /* 🚀 Alarga bem */
+  max-width: 1000px;
   width: 99%;
   margin: 20px auto;
   box-sizing: border-box;
@@ -73,13 +73,21 @@ button:hover {
 }
 
 #pergunta-texto {
-  font-size: 1.6em;
+  font-size: 1.7em;
   margin-bottom: 10px;
 }
 
 #opcoes-container button {
   font-size: 1.5em;
   padding: 18px 28px;
+}
+
+#proxima-btn {
+  display: block;
+  margin: 20px auto 0 auto;
+  font-size: 1.4em;
+  padding: 14px 26px;
+  min-width: 60%;
 }
 
 .feedback,
@@ -206,6 +214,13 @@ body::before {
     padding: 20px 30px;
   }
 
+  #proxima-btn {
+    font-size: 1.5em;
+    padding: 16px 28px;
+    min-width: 80%;
+    margin: 20px auto 0 auto;
+  }
+
   .feedback,
   .explicacao {
     font-size: 1.3em;
@@ -213,14 +228,6 @@ body::before {
 
   #pontuacao-final {
     font-size: 1.3em;
-  }
-
-  button[onclick="toggleMusica()"] {
-    font-size: 11px;
-    padding: 3px 8px;
-    bottom: 5px;
-    left: 5px;
-    min-width: auto;
   }
 
   .floating-heart,
@@ -235,11 +242,31 @@ body::before {
   }
 }
 
-/* 🌟 Botão de música minimalista */
+/* 🌟 Botão de música minimalista – fora da media query */
 button[onclick="toggleMusica()"] {
-  min-width: auto;
-  padding: 4px 12px;
-  font-size: 12px;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10;
+  min-width: auto !important;
+  padding: 5px 12px;
+  font-size: 12px !important;
   border-radius: 12px;
   opacity: 0.85;
+  background-color: #ff69b4;
+  color: white;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ✨ Título especial dividido em duas linhas */
+#titulo-quiz {
+  font-size: 1.6em;
+  line-height: 1.3em;
+  margin-bottom: 15px;
+}
+
+#titulo-quiz span {
+  display: block;
+  margin-top: 4px;
 }
